@@ -44,7 +44,7 @@
 
                     <div class="form-group">
                         <label>Masukkan Tinggi Badan Anda</label>
-                        <input type="number" step="0.01" class="form-control" name="height" placeholder="dalam meter. Gunakan koma (,)">
+                        <input type="number" class="form-control" name="height" placeholder="Tinggi badan dalam cm">
                     </div>
 
                     <center><input type="submit" class="btn btn-success btn-custom-blue" value="HITUNG" /></center>

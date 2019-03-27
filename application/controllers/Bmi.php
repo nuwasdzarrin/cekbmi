@@ -28,7 +28,8 @@ class Bmi extends CI_Controller {
         $this->simple_login->cek_login();
         $weight = $this->input->post('weight');
         $height = $this->input->post('height');
-        $bmi = round ($weight / ($height*$height), 2); //pembulatan 2 angka belakang koma
+        $tinggi = $height/100; 
+        $bmi = round ($weight / ($tinggi*$tinggi), 2); //pembulatan 2 angka belakang koma
         $data = array(
             'user_id' => $this->session->userdata('user_id'),
             'weight' => $weight,

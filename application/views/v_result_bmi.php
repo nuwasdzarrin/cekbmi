@@ -24,9 +24,13 @@
 				<?php } else { ?>
 					<h2 class="result-bmi"><?php echo $latest->bmi; ?></h2>
 					<?php if ($latest->bmi > 18.5 && $latest->bmi < 22.9) { ?>
-						<h3 class="result-bmi">Anda termasuk Sehat</h3>
-					<?php } else { ?>
-						<h3 class="result-bmi">Anda kurang Sehat</h3>
+						<h3 class="result-bmi">Berat badan normal</h3>
+					<?php } else if ($latest->bmi < 18.5) { ?>
+						<h3 class="result-bmi">Berat badan kurang</h3>
+					<?php } else if ($latest->bmi > 23 && $latest->bmi < 29.9) { ?>
+						<h3 class="result-bmi">Berat badan berlebih (kecenderungan obesitas)</h3>
+					<?php } else if ($latest->bmi > 30) { ?>
+						<h3 class="result-bmi">Obesitas</h3>
 					<?php } ?>
 				<?php } ?>
                 <p>berat badan anda bisa dikatakan ideal jika angka bmi anda antara 18,5 sampai 22,9</p>
@@ -43,8 +47,8 @@
 					<thead>
 						<tr>
 							<td>Tanggal</td>
-							<td>Berat Badan</td>
-							<td>Tinggi Badan</td>
+							<td>Berat Badan (Kg)</td>
+							<td>Tinggi Badan (cm)</td>
 							<td>BMI</td>
 						</tr>
 					</thead>
